@@ -1,0 +1,150 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5A1E76;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Title styling */
+h1 {
+  font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tic {
+  color: #FFD700;
+}
+.tac {
+  color: #00BFFF;
+}
+.toe {
+  color: #FFD700;
+}
+
+.container {
+  height: 70vh;
+}
+
+.game {
+  padding: 2vh;
+  border-radius: 1.5rem;
+  box-shadow:0 0  20px rgba(255, 255, 255, 0.4);
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: rgb(118, 183, 236);
+  background-color: #2B0040;
+  cursor: pointer;
+}
+
+/* ✅ NEW: style for disabled boxes */
+.box:disabled {
+  background-color: #555;
+  color: white;
+  opacity: 0.8;
+  cursor: not-allowed; /*red circcle */
+}
+
+.reset {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#restart{
+background-color: white;
+color: #2B0040;
+padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.abc {
+  margin-top: 5vh;
+}
+
+/* ✅ Modal overlay background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* ✅ dim background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ modal content */
+.modal-content {
+  background-color: #1f0033;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 90vw;
+  width: 400px;
+  text-align: center;
+  color: #cfd85d;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.modal h2 {
+  font-size: 2rem;
+}
+
+.modal-img {
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 1rem;
+}
+
+.close {
+  float: right;
+  font-size:4rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .modal h2 {
+    font-size: 1.5rem;
+  }
+}
